@@ -17,14 +17,11 @@ export class ErrorInterceptor implements HttpInterceptor {
              if (errorObj.error) {
                 errorObj = errorObj.error;
             }
-            console.log('antes: '+(!errorObj.status));
             if (!errorObj.status) {
                 errorObj = JSON.parse(errorObj);
             }
-            console.log('depois: '+errorObj.status);
             console.log("Erro detectado pelo interceptor:");
             console.log(errorObj);
-            console.log(errorObj.status);
 
             switch(errorObj.status) {
                 
