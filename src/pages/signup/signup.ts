@@ -48,7 +48,7 @@ export class SignupPage {
       .subscribe(response => {
         this.estados = response;
         this.formGroup.controls.estadoId.setValue(this.estados[0].id);
-        this.updateCidades();
+        this.updatedCidades();
       }),
       error => {};
 
